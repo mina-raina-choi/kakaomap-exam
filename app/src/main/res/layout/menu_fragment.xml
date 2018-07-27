@@ -3,10 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <view class="android.support.v7.app.AlertController$RecycleListView"
+
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@android:id/list">
+        android:scrollbars="vertical"
+        android:id="@+id/recycler_view">
 
-    </view>
+    </android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>
