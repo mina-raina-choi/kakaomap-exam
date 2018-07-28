@@ -8,7 +8,7 @@
 
 
     <fragment
-        android:id="@+id/fragment2"
+        android:id="@+id/menuFragment"
         android:name="com.example.cmina.kakaomap_exam.MenuFragment"
         class="com.example.cmina.kakaomap_exam.MenuFragment"
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <fragment
-        android:id="@+id/fragment"
+        android:id="@+id/textFragment"
         android:name="com.example.cmina.kakaomap_exam.TextFragment"
         class="com.example.cmina.kakaomap_exam.TextFragment"
         android:layout_width="wrap_content"
