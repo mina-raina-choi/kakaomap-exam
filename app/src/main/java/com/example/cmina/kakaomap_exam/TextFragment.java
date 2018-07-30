@@ -16,8 +16,8 @@ public class TextFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.text_fragment, container, false);
-        text = (TextView) view.findViewById(R.id.textView);
-        vers = (TextView) view.findViewById(R.id.textView2);
+        text = (TextView) view.findViewById(R.id.textViewOS);
+        vers = (TextView) view.findViewById(R.id.textViewVersion);
         
         return  view;
     }
