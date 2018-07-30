@@ -25,7 +25,7 @@ public class MenuFragment extends Fragment {
     private RecyclerView.LayoutManager layoutManager;
     private static RecyclerView recyclerView;
 
-    static View.OnClickListener myOnclickListener;
+//    static View.OnClickListener myOnclickListener;
 
     static String[] AndroidOS = new String[] { "Cupcake","Donut","Eclair","Froyo","Gingerbread","Honeycomb","Ice Cream SandWich","Jelly Bean","KitKat" };
     static String[] Version = new String[ ] {"1.5","1.6","2.0-2.1","2.2","2.3","3.0-3.2","4.0","4.1-4.3","4.4"};
@@ -36,8 +36,6 @@ public class MenuFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View menuVeiw = inflater.inflate(R.layout.menu_fragment, container,false);
-
-//        myOnclickListener = new MyOnClickListener(this.getActivity());
 
         recyclerView = (RecyclerView) menuVeiw.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);

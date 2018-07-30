@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static android.content.ContentValues.TAG;
+
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     private ArrayList<String> dataList;
@@ -29,7 +31,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.androidOSTextView = (TextView)itemView.findViewById(R.id.AndroidOs);
+            this.androidOSTextView = (TextView)itemView.findViewById(R.id.androidOS);
         }
     }
 
@@ -44,32 +46,28 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_layout, parent, false);
-        view.setOnClickListener(MenuFragment.myOnclickListener);
-
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
         TextView androidOSTextView = holder.androidOSTextView;
         androidOSTextView.setText(dataList.get(position));
-
-
-        holder.androidOSTextView.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.i("cardview onclick", "click" + position);
+                setItem(position);
                 currPosition = position;
+                Log.i("cardview onclick", "click" + position + "/" + currPosition);
             }
         });
 
-        this.setItem(position);
-
-        if(currPosition == position)
-            androidOSTextView.setBackgroundColor(Color.parseColor("#567845"));
-        else
-            androidOSTextView.setBackgroundColor(Color.parseColor("#ffffff"));
+//        Log.e(TAG, "onBindViewHolder: " + position);
+//        if(currPosition == position) {
+//            holder.itemView.setBackgroundColor(Color.parseColor("#567845"));
+//        } else
+//            holder.itemView.setBackgroundColor(Color.parseColor("#ffffff"));
     }
 
     private void setItem(int position) {

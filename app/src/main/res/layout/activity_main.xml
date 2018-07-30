@@ -11,10 +11,14 @@
         android:id="@+id/menuFragment"
         android:name="com.example.cmina.kakaomap_exam.MenuFragment"
         class="com.example.cmina.kakaomap_exam.MenuFragment"
-        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@id/guideline" />
+        app:layout_constraintRight_toRightOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_width="0dp"
+        />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
