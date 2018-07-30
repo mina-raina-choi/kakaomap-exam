@@ -59,15 +59,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             public void onClick(View view) {
                 setItem(position);
                 currPosition = position;
-                Log.i("cardview onclick", "click" + position + "/" + currPosition);
+                notifyDataSetChanged();
             }
         });
 
-//        Log.e(TAG, "onBindViewHolder: " + position);
-//        if(currPosition == position) {
-//            holder.itemView.setBackgroundColor(Color.parseColor("#567845"));
-//        } else
-//            holder.itemView.setBackgroundColor(Color.parseColor("#ffffff"));
+        if(currPosition == position) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#567845"));
+        } else {
+            holder.itemView.setBackgroundColor(Color.parseColor("#ffffff"));
+        }
     }
 
     private void setItem(int position) {
